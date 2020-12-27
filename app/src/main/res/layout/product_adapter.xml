@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="8dp"
+    android:id="@+id/cardView"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_add_shopping_cart_24" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/productImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/productName"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/productImg"
+            android:text="Rs 500.0"
+            android:textSize="18sp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@+id/productImg"
+            android:text="Carrot"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

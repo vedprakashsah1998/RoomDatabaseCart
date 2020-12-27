@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.CartFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.appbar.MaterialToolbar
+                app:title="@string/cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cart_toolbar"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cart_toolbar"
+                android:id="@+id/cart_adapter"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/subTotal"
+                android:text="Sub Total="
+                android:padding="8dp"
+
+                android:textSize="22sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="22dp"
+                android:layout_below="@+id/cart_adapter"/>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/GST"
+                android:text="Sub Total="
+                android:textSize="22sp"
+                android:padding="8dp"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="22dp"
+                android:layout_below="@+id/subTotal"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/line"
+                android:layout_below="@+id/GST"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Total"
+                android:text="Total="
+                android:padding="8dp"
+                android:textSize="22sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="22dp"
+                android:layout_below="@+id/line"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/line1"
+                android:layout_below="@+id/Total"/>
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

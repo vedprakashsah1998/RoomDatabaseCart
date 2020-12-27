@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="12dp"
+    app:cardCornerRadius="8dp"
+    android:id="@+id/cardView_cart"
+    app:cardElevation="8dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="22dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/plus"
+                android:src="@drawable/ic_add_1_"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/qty"
+                android:textSize="24sp"
+                android:layout_toEndOf="@+id/plus"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="0"
+                />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/minus"
+                    android:src="@drawable/ic_minus_1_"
+                    android:layout_toEndOf="@+id/qty"/>
+
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/productImgCart"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/productPriceCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/productNameCart"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/productImgCart"
+            android:text="Rs 500.0"
+            android:textSize="18sp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/productNameCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@+id/productImgCart"
+            android:text="Carrot"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalPrice"
+            android:layout_toEndOf="@+id/productImgCart"
+            android:layout_below="@id/productPriceCart"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="22dp"
+            />
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
