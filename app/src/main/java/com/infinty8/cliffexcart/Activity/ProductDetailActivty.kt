@@ -47,7 +47,7 @@ class ProductDetailActivty : AppCompatActivity() {
         binding!!.productDescDetail.text = desc
         Glide.with(this@ProductDetailActivty).load(image).into(binding!!.productDetailImg)
         binding!!.titleTextData.text = name
-        binding!!.back.setOnClickListener { v: View? -> onBackPressed() }
+        binding!!.back.setOnClickListener { onBackPressed() }
         when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
             Configuration.UI_MODE_NIGHT_YES -> binding!!.titleTextData.setTextColor(Color.parseColor("#FFFFFF"))
             Configuration.UI_MODE_NIGHT_NO -> binding!!.titleTextData.setTextColor(Color.parseColor("#000000"))
